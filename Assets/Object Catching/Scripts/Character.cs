@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //Character component
 //methods:
-//-control position; Here is up to you which aproach to select (two fixed location: left and right; or it could be just horizontal
+//√-control position; Here is up to you which aproach to select (two fixed location: left and right; or it could be just horizontal
 //- control elements catching; Once Item touch Character or Floor - it should reset the Item and drop it again from the top.
 
 public class Character : MonoBehaviour

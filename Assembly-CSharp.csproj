@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Object Catching/Scripts/Character.cs" />
+    <Compile Include="Assets/Object Catching/Scripts/Items.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
