@@ -29,7 +29,6 @@ public class Items : MonoBehaviour
 
     void Update()
     {
-        //StartCoroutine(waitFor5Seconds());
         HandleCubeItems();
     }
 
@@ -56,6 +55,6 @@ public class Items : MonoBehaviour
     IEnumerator waitFor5Seconds()
     {
         yield return new WaitForSeconds(5f);
-        Debug.Log("waiting happens now");
+        Debug.Log("waiting ended");
     }
 }
