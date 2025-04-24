@@ -11,7 +11,7 @@ public class Items : MonoBehaviour
 {
     [SerializeField] private GameObject _cubeItemPrefab;
     [SerializeField] private List<GameObject> _cubePool = new List<GameObject>();
-    private int _poolSize = 20;
+    private int _poolSize = 2;
     private Transform _transform;
     private GameObject _cubeItem;
 
@@ -29,22 +29,29 @@ public class Items : MonoBehaviour
 
     void Update()
     {
-        HandleCubeItems();
+        StartCoroutine(HandleCubeItems());
     }
 
-    private void HandleCubeItems()
-    {    //use cubes from the pool
+    IEnumerator HandleCubeItems()
+    {
+        //use cubes from the pool
         foreach (GameObject Item in _cubePool)
-        {
+        {          
             Item.SetActive(true);
-            StartCoroutine(waitFor5Seconds());
+            yield return new WaitForSeconds(1f);
+
             //RandoiseColor(Item);
         }
-        // Create new cubes and add them to the pool, if there're no cubes left in it
-        //GameObject new_cubeItem = Instantiate(_cubeItemPrefab, new Vector3(Random.Range(-10, 11), 1, 1), Quaternion.identity);
-        //_cubePool.Add(new_cubeItem);
-        //RandoiseColor(new_cubeItem);
+        //Create new cubes and add them to the pool, if there're no cubes left in it
+        //{
+        //    GameObject new_cubeItem = Instantiate(_cubeItemPrefab, new Vector3(Random.Range(-10, 11), 1, 1), Quaternion.identity);
+        //    new_cubeItem.SetActive(true);
+        //    WaitFor1Second()
+        //    _cubePool.Add(new_cubeItem);
+        //    //RandoiseColor(new_cubeItem);
+        //}
     }
+
     //make the cubes' colors random using MaterialPropertyBlock
     //private void RandoiseColor(GameObject _cubeItem)
     //{
@@ -52,9 +59,10 @@ public class Items : MonoBehaviour
     //    propertyBlock.SetColor("_Color", Random.ColorHSV());
     //    _cubeItem.GetComponent<MeshRenderer>().SetPropertyBlock(propertyBlock);
     //}
-    IEnumerator waitFor5Seconds()
+
+    IEnumerator WaitFor1Second()
     {
-        yield return new WaitForSeconds(5f);
-        Debug.Log("waiting ended");
+        yield return new WaitForSeconds(1f);
+
     }
 }
