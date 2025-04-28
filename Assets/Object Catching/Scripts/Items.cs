@@ -19,17 +19,13 @@ public class Items : MonoBehaviour
     {
         _transform = transform;
         //Creating the pool
-        for (int i = 0; i < _poolSize; i++)
-        {
-            GameObject _cube = Instantiate(_cubeItemPrefab, new Vector3(Random.Range(-10, 11), 3, 1), Quaternion.identity);
-            _cube.SetActive(false);
-            _cubePool.Add(_cube);
-        }
+        addToPool();
+        StartCoroutine(HandleCubeItems());
     }
 
     void Update()
     {
-        StartCoroutine(HandleCubeItems());
+  
     }
 
     IEnumerator HandleCubeItems()
@@ -50,7 +46,7 @@ public class Items : MonoBehaviour
             //new_cubeItem.SetActive(false);
 
             //new__cubePoolCopy.Add(new_cubeItem);
-            Start();
+            addToPool();
             foreach (GameObject Item in new__cubePoolCopy)
             {
                 Item.SetActive(true);
@@ -59,6 +55,15 @@ public class Items : MonoBehaviour
             }
             //RandoiseColor(new_cubeItem);
 
+        }
+    }
+    void addToPool()
+    {
+        for (int i = 0; i < _poolSize; i++)
+        {
+            GameObject _cube = Instantiate(_cubeItemPrefab, new Vector3(Random.Range(-10, 11), 3, 1), Quaternion.identity);
+            _cube.SetActive(false);
+            _cubePool.Add(_cube);
         }
     }
 }
