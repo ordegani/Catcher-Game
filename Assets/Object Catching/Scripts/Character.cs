@@ -15,7 +15,6 @@ public class Character : MonoBehaviour
     void Start()
     {
         _transform = transform;
-        _transform.position = _currentPlaneCharacterPosition;
     }
 
     void Update()
@@ -25,14 +24,14 @@ public class Character : MonoBehaviour
 
     void MovePlaneCharacter()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            _currentPlaneCharacterPosition.x += 1;
+            _currentPlaneCharacterPosition.x += 0.01f;
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            _currentPlaneCharacterPosition.x -= 1;
+            _currentPlaneCharacterPosition.x -= 0.01f;
         }
-        _transform.position = new Vector3(_currentPlaneCharacterPosition.x, _transform.position.y, _transform.position.z);
+        _transform.position = _currentPlaneCharacterPosition;
     }
 }

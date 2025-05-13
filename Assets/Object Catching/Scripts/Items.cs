@@ -21,6 +21,22 @@ public class Items : MonoBehaviour
         //Creating the pool
         addToPool();
         StartCoroutine(HandleCubeItems());
+        //Option:
+        //IEnumerator SpawnCubesOneByOne()
+        //{
+        //    foreach (GameObject item in _cubePool)
+        //    {
+        //        item.SetActive(true);
+        //        yield return new WaitForSeconds(1f);
+        //    }
+
+        //    // Add more to the pool if needed
+        //    AddToPool();
+
+        //    // Restart the coroutine
+        //    StartCoroutine(SpawnCubesOneByOne());
+        //}
+
     }
 
     void Update()
