@@ -49,10 +49,17 @@ public class Items : MonoBehaviour
 
     void Start()
     {
+        //List<GameObject> new__cubePoolCopy = new List<GameObject>(_cubePool);
+        ////use cubes from the pool
+        //foreach (GameObject Item in new__cubePoolCopy)
+        //{
+        //    Item.SetActive(true);
+        //    //RandoiseColor(Item);
+        //}
         _transform = transform;
         //Creating the pool
         addToPool();
-        StartCoroutine(HandleCubeItems());
+        //StartCoroutine(HandleCubeItems());
         //Option:
         //IEnumerator SpawnCubesOneByOne()
         //{
@@ -101,34 +108,34 @@ public class Items : MonoBehaviour
     {
     }
 
-    IEnumerator HandleCubeItems()
-    {
-        while (true) // todo: this is not good. that means you will always have running coroutine 
-        {
-            List<GameObject> new__cubePoolCopy = new List<GameObject>(_cubePool);
-            //use cubes from the pool
-            foreach (GameObject Item in new__cubePoolCopy)
-            {
-                Item.SetActive(true);
-                yield return new WaitForSeconds(1f);
-                //RandoiseColor(Item);
-            }
+    //IEnumerator HandleCubeItems()
+    //{
+    //    while (true) // todo: this is not good. that means you will always have running coroutine 
+    //    {
+    //        //List<GameObject> new__cubePoolCopy = new List<GameObject>(_cubePool);
+    //        ////use cubes from the pool
+    //        //foreach (GameObject Item in new__cubePoolCopy)
+    //        //{
+    //        //    Item.SetActive(true);
+    //        //    yield return new WaitForSeconds(1f);
+    //        //    //RandoiseColor(Item);
+    //        //}
 
-            //Create new cubes and add them to the pool, if there're no cubes left in it
-            //GameObject new_cubeItem = Instantiate(_cubeItemPrefab, new Vector3(Random.Range(-10, 11), 3, 1), Quaternion.identity);
-            //new_cubeItem.SetActive(false);
+    //        //Create new cubes and add them to the pool, if there're no cubes left in it
+    //        //GameObject new_cubeItem = Instantiate(_cubeItemPrefab, new Vector3(Random.Range(-10, 11), 3, 1), Quaternion.identity);
+    //        //new_cubeItem.SetActive(false);
 
-            //new__cubePoolCopy.Add(new_cubeItem);
-            addToPool();
-            foreach (GameObject Item in new__cubePoolCopy)
-            {
-                Item.SetActive(true);
-                yield return new WaitForSeconds(1f);
-                //RandoiseColor(Item);
-            }
-            //RandoiseColor(new_cubeItem);
-        }
-    }
+    //        //new__cubePoolCopy.Add(new_cubeItem);
+    //        addToPool();
+    //        foreach (GameObject Item in new__cubePoolCopy)
+    //        {
+    //            Item.SetActive(true);
+    //            yield return new WaitForSeconds(1f);
+    //            //RandoiseColor(Item);
+    //        }
+    //        //RandoiseColor(new_cubeItem);
+    //    }
+    //}
 
     void addToPool()
     {
