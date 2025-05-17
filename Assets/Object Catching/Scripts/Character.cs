@@ -27,11 +27,9 @@ namespace ChatcherGame.Player
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 _currentPlaneCharacterPosition.x += 0.01f;
-
             }
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-
                 _currentPlaneCharacterPosition.x -= 0.01f;
             }
             _transform.position = _currentPlaneCharacterPosition;
