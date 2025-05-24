@@ -387,7 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0539229d5689456d9fdae08a89f32c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _planeCharacter: {fileID: 0}
 --- !u!23 &1991659496
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -460,7 +459,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991659493}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

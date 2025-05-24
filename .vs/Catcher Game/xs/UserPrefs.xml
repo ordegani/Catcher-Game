@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{BC4EF9FF-82D1-7F08-A39F-1CA8CF15E26D}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Object Catching/Scripts/Character.cs">
     <Files>
-      <File FileName="Assets/Object Catching/Scripts/Character.cs" Line="29" Column="10" />
-      <File FileName="Assets/Object Catching/Scripts/Items.cs" />
+      <File FileName="Assets/Object Catching/Scripts/Character.cs" Line="29" Column="59" />
+      <File FileName="Assets/Object Catching/Scripts/Items.cs" Line="43" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="da46064f-9cc3-4f23-8619-8f6ab2e0a7dc" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e3064b95-b475-4637-8d21-b747207f0146" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
